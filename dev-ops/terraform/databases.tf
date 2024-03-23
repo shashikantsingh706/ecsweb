@@ -1,6 +1,6 @@
 resource "aws_elasticache_serverless_cache" "redis_cluster" {
   engine                   = "redis"
-  name                     = "${terraform.workspace}-cql-redis-cluster"
+  name                     = "${lower(terraform.workspace)}-cql-redis-cluster"
   daily_snapshot_time      = "09:00"
   description              = "Redis Cache Server"
   major_engine_version     = "7"
@@ -10,7 +10,7 @@ resource "aws_elasticache_serverless_cache" "redis_cluster" {
 }
 
 resource "aws_docdbelastic_cluster" "mongodb_cluster" {
-  name                   = "${terraform.workspace}-cql-mongodb-cluster"
+  name                   = "${lower(terraform.workspace)}-cql-mongodb-cluster"
   admin_user_name        = var.MONGO_USER
   admin_user_password    = var.MONGO_PWD
   auth_type              = "PLAIN_TEXT"
