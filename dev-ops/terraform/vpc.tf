@@ -1,3 +1,4 @@
+/*
 resource "aws_vpc" "web_server_vpc" {
   cidr_block = "10.0.0.0/16"
 }
@@ -29,3 +30,4 @@ resource "aws_route" "internet_gateway_route" {
   destination_cidr_block = "0.0.0.0/0"
   gateway_id             = aws_internet_gateway.internet_gw.id
 }
+*/

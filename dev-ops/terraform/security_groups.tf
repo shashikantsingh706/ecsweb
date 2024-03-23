@@ -1,3 +1,4 @@
+/*
 resource "aws_security_group" "mongodb_sg" {
   name        = "${terraform.workspace}-cql-mongodb-group"
   description = "Security group for MongoDB"
@@ -71,3 +72,4 @@ resource "aws_security_group" "web_server_sg" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 }
+*/

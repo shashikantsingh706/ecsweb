@@ -1,3 +1,4 @@
+/*
 resource "aws_elasticache_serverless_cache" "redis_cluster" {
   engine                   = "redis"
   name                     = "${lower(terraform.workspace)}-cql-redis-cluster"
@@ -19,4 +20,4 @@ resource "aws_docdbelastic_cluster" "mongodb_cluster" {
   subnet_ids             = [aws_subnet.subnet_a.id, aws_subnet.subnet_b.id, aws_subnet.subnet_c.id]
   vpc_security_group_ids = [aws_security_group.mongodb_sg.id]
 }
-
+*/

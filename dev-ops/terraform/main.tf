@@ -1,3 +1,4 @@
+/*
 resource "aws_ecs_cluster" "web_server_cluster" {
   name = "${terraform.workspace}_yz_web_server_cluster"
 }
@@ -200,3 +201,4 @@ resource "aws_appautoscaling_target" "ecs_scaling_target" {
   service_namespace  = "ecs"
   scalable_dimension = "ecs:service:DesiredCount"
 }
+*/
