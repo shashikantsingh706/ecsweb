@@ -1,0 +1,15 @@
+{
+  "listenPort": ["required", "positive_integer"],
+  "db": ["required", {
+    "nested_object": {
+      "connection" : ["required", "string"],
+      "database" : ["required", "string"]
+    }
+  }],
+  "redis": ["required", {
+    "nested_object": {
+      "port" : ["required", "positive_integer"],
+      "host" : ["required", "string"]
+    }
+  }]
+}

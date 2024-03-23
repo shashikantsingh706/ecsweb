@@ -1,0 +1,11 @@
+{
+  "listenPort": "{{SERVER_PORT}}",
+  "redis": {
+    "port": "{{REDIS_PORT}}",
+    "host": "{{REDIS_HOST}}"
+  },
+  "db": {
+    "connection": "{{DATABASE_CONNECTION_URI}}",
+    "database": "{{DB_NAME}}"
+  }
+}
