@@ -15,6 +15,9 @@ RUN yarn install --frozen-lockfile
 RUN apk add --no-cache bash
 RUN apk add --no-cache stress-ng
 
+# Grant execute permissions to the entrypoint script
+RUN chmod +x ./entrypoint.sh
+
 EXPOSE 3000
 
 ENTRYPOINT ./entrypoint.sh
