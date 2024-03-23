@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  build-image:
     runs-on: ubuntu-latest
     steps:
       - name: Check Out Repo
@@ -38,5 +38,4 @@ jobs:
             DATABASE_CONNECTION_URI=${{ vars.DATABASE_CONNECTION_URI }}
             REDIS_HOST=${{ vars.REDIS_HOST }}
           tags: |
-            rekhugopal/ecswebapp:${{ steps.set_version.outputs.no-dash }}
             rekhugopal/ecswebapp:latest
