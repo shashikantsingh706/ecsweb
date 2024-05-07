@@ -1,5 +1,5 @@
 variable "AWS_REGION" {
-  default = "us-west-2"
+  default = "us-east-1"
 }
 
 variable "MONGO_USER" {
@@ -11,7 +11,7 @@ variable "MONGO_PWD" {
 }
 
 variable "DOCKER_IMAGE" {
-  default = "rekhugopal/ecswebapp:latest"
+  default = "891377310654.dkr.ecr.us-east-1.amazonaws.com/ecswebapp:latest"
 }
 
 variable "REDIS_PORT" {

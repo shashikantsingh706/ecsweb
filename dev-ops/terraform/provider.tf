@@ -1,20 +1,25 @@
+# Terraform Block
 terraform {
+  #required_version = ">= 1.0" # which means any version equal & above 0.14 like 0.15, 0.16 etc and < 1.xx
+  required_version = "~> 1.8.1"   
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = ">= 5.40"
+      #version = ">= 4.65"
+      version = ">= 5.38"
     }
   }
-  backend "remote" {
-		hostname = "app.terraform.io"
-		organization = "CloudQuickLabs"
 
-		workspaces {
-			name = "AWSECS"
-		}
-	}
+
+  backend "s3" {
+    bucket = "ecs-terraform-st"
+    key    = "terraform_state/webecs-terraform-second/terraform.tfstate"
+    region = "us-east-1"
+ }
 }
 
+# Provider Block se
 provider "aws" {
-  region = var.AWS_REGION
+  region     = "us-east-1"
+  profile    = "default"
 }

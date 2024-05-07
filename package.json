@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/RekhuGopal/AWS_ECS_Web_Services#README"
+    "url": "https://github.com/shashikantsingh706/ecsweb.gitecho "# ecsweb" >> README.md#README"
   },
   "workspaces": [
     "apps/web-server"

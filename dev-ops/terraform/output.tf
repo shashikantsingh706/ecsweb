@@ -1,4 +1,3 @@
-/*
 output "aws_region" {
   value = var.AWS_REGION
 }
@@ -18,4 +17,5 @@ output "mongodb_connection_string" {
 output "alb_public_url" {
   value = "http://${aws_lb.web_server_load_balancer.dns_name}"
 }
-*/
+
+
