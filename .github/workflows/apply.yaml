@@ -25,7 +25,7 @@ jobs:
           region: us-east-1
           key:  ${{secrets.AWS_USER_KEY}}
           secret:  ${{secrets.AWS_USER_SECRET_KEY}}
-          
+
       - name: Terraform Init
         id: init
         working-directory: ./dev-ops/terraform/
@@ -48,4 +48,4 @@ jobs:
 
       - name: Terraform Apply
         working-directory: ./dev-ops/terraform/
-        run: terraform apply -auto-approve
+        run: terraform destroy -auto-approve
