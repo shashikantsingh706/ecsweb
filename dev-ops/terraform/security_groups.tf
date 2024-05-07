@@ -1,6 +1,5 @@
-/*
 resource "aws_security_group" "mongodb_sg" {
-  name        = "${terraform.workspace}-cql-mongodb-group"
+  name        = "ecs-cql-mongodb-group"
   description = "Security group for MongoDB"
   vpc_id      = aws_vpc.web_server_vpc.id
 
@@ -20,7 +19,7 @@ resource "aws_security_group" "mongodb_sg" {
 }
 
 resource "aws_security_group" "redis_sg" {
-  name        = "${terraform.workspace}-cql-redis-group"
+  name        = "ecs-cql-redis-group"
   description = "Security group for Redis"
   vpc_id      = aws_vpc.web_server_vpc.id
 
@@ -40,7 +39,7 @@ resource "aws_security_group" "redis_sg" {
 }
 
 resource "aws_security_group" "web_server_sg" {
-  name        = "${terraform.workspace}-cql-web-server-group"
+  name        = "ecs-cql-web-server-group"
   description = "Security group for web servers"
   vpc_id      = aws_vpc.web_server_vpc.id
 
@@ -72,4 +71,3 @@ resource "aws_security_group" "web_server_sg" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 }
-*/
