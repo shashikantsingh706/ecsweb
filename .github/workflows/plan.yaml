@@ -1,8 +1,7 @@
 name: "ECSStack-Plan"
 on:
-  pull_request:
-    branches:
-      - master
+  workflow_dispatch:
+  
 jobs:
   plan-ecs-stack:
     runs-on: ubuntu-latest
